@@ -7,3 +7,9 @@ A Simple GUI for RoboCopy for anyone, that does not want to read the manual befo
 
  * Either [Download the installer](https://github.com/qxsch/RoboCopyGui/raw/master/Binary/QXSRoboCopyGui.msi)
  * or [Download the executable](https://github.com/qxsch/RoboCopyGui/raw/master/Binary/RoboCopy.exe)
+
+Main Window:
+<img src="https://github.com/qxsch/RoboCopyGui/blob/master/RoboCopy.png">
+
+RoboCopyGui in Progress:
+<img src="https://github.com/qxsch/RoboCopyGui/blob/master/RoboCopy2.png">
