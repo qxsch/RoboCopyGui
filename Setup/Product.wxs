@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="QXSRoboCopyGUI" Language="1033" Version="1.0.1.0" Manufacturer="QXS.CH" UpgradeCode="cd9946bb-75fd-4855-b790-5d8ff038082b">
-		<Package InstallerVersion="201" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
+	<Product Id="*" Name="QXSRoboCopyGUI" Language="1033" Version="1.0.2.0" Manufacturer="QXS.CH" UpgradeCode="cd9946bb-75fd-4855-b790-5d8ff038082b">
+		<Package InstallerVersion="202" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of ScreenResolution is already installed." />
 		<MediaTemplate EmbedCab="yes" />

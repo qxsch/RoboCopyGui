@@ -9,12 +9,11 @@
         Title="RoboCopy Live Stream Window" MinWidth="200" MinHeight="200" Height="340" Width="600" Visibility="Visible">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <ProgressBar x:Name="fileProgress" Grid.Row="0" Grid.Column="0" Margin="10,5,10,5" Height="10" Value="0"  />
 
-        <TextBox x:Name="outputBox" Grid.Row="1" Grid.Column="0" Margin="10,10,10,10" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" IsReadOnly="True" FontFamily="Consolas" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <TextBox x:Name="outputBox" Grid.Row="0" Grid.Column="0" Margin="10,10,10,5" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" IsReadOnly="True" FontFamily="Consolas" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
             <TextBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Copy to clipboard" IsEnabled="True" Click="outputBox_copyToClipboard_Click">
@@ -24,6 +23,8 @@
                 </ContextMenu>
             </TextBox.ContextMenu>
         </TextBox>
+
+        <ProgressBar x:Name="fileProgress" Grid.Row="1" Grid.Column="0" Margin="10,5,10,5" Height="10" Value="0"  />
 
     </Grid>
 </Window>
