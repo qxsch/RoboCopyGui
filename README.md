@@ -3,5 +3,5 @@
 # RoboCopyGui
 
 
-A Simple GUI for RoboCopy for anyone, that does not want to read the manual before using it.
+A Simple GUI for RoboCopy for anyone, that does not want to read the manual before using it. (Icon designed by Icon Monk from FlatIcon)
 
