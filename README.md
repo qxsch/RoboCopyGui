@@ -5,3 +5,4 @@
 
 A Simple GUI for RoboCopy for anyone, that does not want to read the manual before using it. (Icon designed by [Icon Monk](https://www.flaticon.com/authors/icon-monk) from FlatIcon)
 
+[Download the installer](https://github.com/qxsch/RoboCopyGui/raw/master/Binary/QXSRoboCopyGui.msi)
