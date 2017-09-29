@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="QXSRoboCopyGUI" Language="1033" Version="1.0.1.0" Manufacturer="QXS.CH" UpgradeCode="cd9946bb-75fd-4855-b790-5d8ff038082b">
+		<Package InstallerVersion="201" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of ScreenResolution is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ApplicationFeature" Title="Application" Level="1" ConfigurableDirectory="INSTALLFOLDER" Description="Installs the RoboCopy.exe file to have a GUI for RoboCopy.">
+			<ComponentRef Id="ApplicationFiles" />
+      <ComponentRef Id="ProgramMenuDir" />
+		</Feature>
+  
+    <!-- <Property Id="ALLUSERS" Value="1" /> -->
+    
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\GPL3.rtf" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" ></Property>
+    <UIRef Id="WixUI_FeatureTree"/>
+
+    <PropertyRef Id="WIX_IS_NETFRAMEWORK_45_OR_LATER_INSTALLED"/>
+    <Condition Message="This application requires .NET Framework 4.5. Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_45_OR_LATER_INSTALLED]]>
+    </Condition>
+    <Icon Id="RoboCopy.exe" SourceFile="$(var.RoboCopy.TargetDir)\RoboCopy.exe" />
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="QXSRoboCopyGUI">
+            <Component Id="ApplicationFiles" Guid="2EAA019C-BE14-4202-961F-40DCA7D4EF21">
+              <File Id="AFRoboCopy.exe" Source="$(var.RoboCopy.TargetDir)\RoboCopy.exe" Name="RoboCopy.exe" KeyPath="yes">
+                <Shortcut Id="startmenuRoboCopy.exe" Directory="ProgramMenuDir" Name="QXS RoboCopy GUI" WorkingDirectory="INSTALLDIR" Icon="RoboCopy.exe" IconIndex="0" Advertise="yes" />
+              </File>
+              <File Id="AFRoboCopy.exe.config" Source="$(var.RoboCopy.TargetDir)\RoboCopy.exe.config" Name="RoboCopy.exe.config" />
+            </Component>
+        </Directory>
+			</Directory>
+      <Directory Id="ProgramMenuFolder" Name="Programs">
+          <Directory Id="ProgramMenuDir" Name="QXS RoboCopy">
+            <Component Id="ProgramMenuDir" Guid="689A969B-CCE1-48A9-B287-F6576CE3F21C">
+              <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+              <RegistryValue Root="HKMU" Key="Software\QXSCH\RoboCopyGui\Uninstall" Type="string" Value="" KeyPath="yes" />
+            </Component>
+          </Directory>
+      </Directory>
+  </Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+		</ComponentGroup>
+	</Fragment>
+</Wix>

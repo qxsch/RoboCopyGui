@@ -81,20 +81,15 @@ namespace RoboCopy
                 switch (wParam.ToInt32())
                 {
                     case _AboutSysMenuID:
-                        bool createWindow = true;
                         // closing open log windows 
                         foreach (Window w in System.Windows.Application.Current.Windows)
                         {
                             AboutWindow aw = w as AboutWindow;
                             if (aw == null) continue;
-                            aw.Focus();
-                            createWindow = false;
+                            aw.Close();
                         }
 
-                        if(createWindow)
-                        {
-                            new AboutWindow();
-                        }
+                        new AboutWindow();
 
                         handled = true;
                         break;
