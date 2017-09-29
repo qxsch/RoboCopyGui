@@ -1,0 +1,61 @@
+﻿<Window x:Class="RoboCopy.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoboCopy"
+        mc:Ignorable="d"
+        Title="About / Credits" Height="500" Width="600" Visibility="Visible">
+    <Grid>
+        <TextBox IsReadOnly="True" FontFamily="Consolas" xml:space="preserve" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"><![CDATA[An Application by QXSCH visit on github:
+
+                https://github.com/qxsch
+                
+                
+* * * * * * * * * * * * * * * * *
+* Application Icon Attribution  *
+* * * * * * * * * * * * * * * * *
+
+    Designed by Icon Monk from FlatIcon
+
+                
+                
+* * * * * * * * * * * * * * * * *
+* ModernUIIcons.com Attribution *
+* * * * * * * * * * * * * * * * *
+    ## Creator
+    - Austin Andrews (@templarian)
+
+    ## Contributor
+    - Jay Zawrotny (@JayZawrotny)
+        - A Bunch
+    - Oren Nachman
+        - appbar.chevron.down
+        - appbar.chevron.up
+        - appbar.chevron.left
+        - appbar.chevron.right
+
+    ## Derived Works
+    - Alex Peattie
+        - Social: http://www.alexpeattie.com/projects/justvector_icons/
+
+    ## Attribution
+    - Kris Vandermotten (@kvandermotten)
+        - appbar.medical.pulse
+    - Constantin Kichinsky (@kichinsky)
+        - appbar.currency.rubles
+        - appbar.currency.grivna
+    - Massimo Savazzi (@msavazzi)
+        - List of missing exported icons
+    - Proletkult Graphik, from The Noun Project
+        - appbar.draw.pen (inspired)
+    - Olivier Guin, from The Noun Project
+        - appbar.draw.marker
+    - Gibran Bisio, from The Noun Project
+        - appbar.draw.bucket
+    Andrew Forrester, from The Noun Project
+        - appbar.fingerprint
+]]>
+</TextBox>
+    </Grid>
+</Window>

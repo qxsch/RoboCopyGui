@@ -1,0 +1,29 @@
+﻿<Window x:Class="RoboCopy.LiveStreamWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoboCopy"
+        mc:Ignorable="d"
+        Icon="Icons/copy.png"
+        Title="RoboCopy Live Stream Window" MinWidth="200" MinHeight="200" Height="340" Width="600" Visibility="Visible">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ProgressBar x:Name="fileProgress" Grid.Row="0" Grid.Column="0" Margin="10,5,10,5" Height="10" Value="0"  />
+
+        <TextBox x:Name="outputBox" Grid.Row="1" Grid.Column="0" Margin="10,10,10,10" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" IsReadOnly="True" FontFamily="Consolas" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Copy to clipboard" IsEnabled="True" Click="outputBox_copyToClipboard_Click">
+                    </MenuItem>
+                    <MenuItem Header="Save As" IsEnabled="True" Click="outputBox_saveAs_Click">
+                    </MenuItem>
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+
+    </Grid>
+</Window>
